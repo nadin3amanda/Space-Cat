@@ -1,0 +1,106 @@
+body {
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+} /* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    #6cf3f5,
+    #91cefb,
+    #b7b3ce,
+    #efaed0,
+    #f1b8fc
+  );
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%;
+} /* ---- stats.js ---- */
+.count-particles {
+  background: transparent;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #ffffff;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 2px;
+}
+.js-count-particles {
+  font-size: 2px;
+}
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+#stats {
+  display: flex;
+  border-radius: 1px 2px 0 0;
+  overflow: hidden;
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+.spacecat {
+  display: flex;
+  position: absolute;
+  margin: 200px 0px 0px 500px;
+  animation: rotation 7s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 280px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .spacecat {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 200px;
+  }
+
+  #particles-js {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      to bottom left,
+      #6cf3f5,
+      #91cefb,
+      #b7b3ce,
+      #efaed0,
+      #f1b8fc
+    );
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 50%;
+  }
+}
